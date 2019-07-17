@@ -9,10 +9,10 @@ export class HeroeTarjetaComponent implements OnInit {
     @Input() heroe: any ={};
     @Input() index: number; 
 
-    @Output() hereoSeleccionado: EventEmitter<number>;
+    @Output() heroeSeleccionado: EventEmitter<number>;
 
     constructor(private router:Router){
-      this.hereoSeleccionado = new EventEmitter();
+      this.heroeSeleccionado = new EventEmitter();
     }
 
     ngOnInit(){
@@ -22,6 +22,6 @@ export class HeroeTarjetaComponent implements OnInit {
     verHeroe(){
       //console.log(this.index);
       //this.router.navigate(['/heroe', this.index]);
-      this.hereoSeleccionado.emit(this.index);
+      this.heroeSeleccionado.emit(this.index);
     }
 }
